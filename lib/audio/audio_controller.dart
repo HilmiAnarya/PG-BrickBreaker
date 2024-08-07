@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter_soloud/flutter_soloud.dart';  // ← Add this...
 import 'package:logging/logging.dart';
+import 'package:flutter_soloud/flutter_soloud.dart';
 
 class AudioController {
   static final Logger _log = Logger('AudioController');
@@ -73,12 +74,6 @@ class AudioController {
     _soloud!.removeGlobalFilter(FilterType.freeverbFilter);
   }
 
-  _musicHandle = await _soloud!.play(
-  musicSource,
-  volume: 0.6,
-  looping: true,
-  // ↓ The exact timestamp of the start of the loop.
-  loopingStartAt: const Duration(seconds: 25, milliseconds: 43),
-);
+
 
 }
